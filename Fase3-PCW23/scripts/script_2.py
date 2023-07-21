@@ -98,8 +98,6 @@ def process_file(file_path, root, process_id):
         tasks_df = pd.DataFrame(tasks)
         tasks_df['host'] = host
         tasks_df.to_csv(csv_file_path, index=False, header=False, mode='a')
-    
-    raise Error("Helo")
 
 def process_files_in_folder(folder_path, process_id):
     for root, _, files in os.walk(folder_path):
@@ -121,5 +119,5 @@ def main(csv_file):
             print(f"A pasta '{folder_path}' não existe.")
 
 if __name__ == "__main__":
-    csv_file = "~/output.csv"
+    csv_file = "~/output_1.csv"
     main(csv_file)
