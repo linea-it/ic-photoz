@@ -1,0 +1,52 @@
+Run status ,Owner,Cluster,Scheduler,Cluster nodes,N cores,Test name (process ID),Desctiption,PZ algorithm,Input data,Output size (GB),Is unique,Duration,Parent directory,Conclusions/Other considerations
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,test_fzboost_50_files,Test linearity ,FlexZBoost,50 original files ,201,FALSE,0:11:07,/lustre/t0/scratch/users/heloisa.mengisztki,input 11G em 620 arquivos
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl16",448,test_fzboost_100_files,Test linearity ,FlexZBoost,100 original files ,402,FALSE,0:24:47,/lustre/t0/scratch/users/heloisa.mengisztki,input 21G em 1244 arquivos
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl17",448,test_fzboost_150_files,Test linearity ,FlexZBoost,150 original files ,601,FALSE,0:30:26,/lustre/t0/scratch/users/heloisa.mengisztki,input 31G em 1855 arquivos
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl18",448,test_fzboost_2x_files,Test linearity ,FlexZBoost,2x original files ,1254,FALSE,0:57:25,/lustre/t0/scratch/users/heloisa.mengisztki,input 66G em 3870 arquivos
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl19",448,test_bpz_50_files,Test linearity ,BPZ,50 original files ,203,FALSE,0:07:52,/lustre/t0/scratch/users/heloisa.mengisztki,
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl20",448,test_bpz_100_files,Test linearity ,BPZ,100 original files ,406,FALSE,0:14:48,/lustre/t0/scratch/users/heloisa.mengisztki,
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl21",448,test_bpz_150_files,Test linearity ,BPZ,150 original files ,607,FALSE,0:26:24,/lustre/t0/scratch/users/heloisa.mengisztki,APL 13 e 15 são as q ficaram mais tempo
+Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl22",448,test_bpz_2x_files,Test linearity ,BPZ,2x original files ,1254,FALSE,0:42:52,/lustre/t0/scratch/users/heloisa.mengisztki,
+Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,test_io_chunk_2M,Test I/O ,FlexZBoost,whole files (~2M obj),653,FALSE,1:12:03,/lustre/t1/cl/lsst/pz_project/pcw_2023,esse ocupa apenas 157 slots
+Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,test_io_chunk_150k,Test I/O ,FlexZBoost,prep-proc limit 150k obj ,660,FALSE,0:30:41,/lustre/t1/cl/lsst/pz_project/pcw_2023,refazer esse teste limitando a 157 slots 
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t1,"Test hardware - read from T1, write to T1",FlexZBoost,"DP0.2 Full 
+1935 .pq files
+33 GB",627,TRUE,0:36:09,/lustre/t1/cl/lsst/pz_project/pcw_2023,"input dir is a symbolic link to /lustre/t1/cl/lsst/pz_project/pcw_2023/dp0.2_pre_processed 
+training pkl file copied from Henrique's dir to  /home/julia/.local/share/rail_scripts 
+Nodes online: 15, Slots total: 840, Slots in use: 392, Slots free: 448"
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t0,"Test hardware - read from T0, write to T0",FlexZBoost,DP0.2 Full ,627,FALSE,0:35:42,/lustre/t0/scratch/users/julia/pcw_2023,
+Killed,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_ms04,"Test hardware - read from MS04,  write to MS04",FlexZBoost,DP0.2 Full ,627,FALSE,,,
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,"test_fzboost_31_bins           
+",Test output resolution - 31 bins,FlexZBoost,DP0.2 Full ,67,TRUE,2:01:15,/lustre/t0/scratch/users/julia/pcw_2023,Using the default training pkl file ~/.local/share/rail_scripts/estimator_fzboost.pkl
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_101_bins,Test output resolution - 101 bins,FlexZBoost,DP0.2 Full ,212,TRUE,1:04:24,/lustre/t0/scratch/users/julia/pcw_2023,Unexpected result -> double check! 
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_201_bins,Test output resolution - 201 bins,FlexZBoost,DP0.2 Full ,419,TRUE,1:13:06,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_301_bins,Test output resolution - 301 bins,FlexZBoost,DP0.2 Full ,627,FALSE,1:01:05,/lustre/t0/scratch/users/julia/pcw_2023,./rail-train -b 301 /home/julia/tmp/data/dp0_2/training_set_dp0.2_10k.pq
+Finished,Julia,Apollo,HTCondor,apl02 ,1,"test_train_10k   
+",rail-train 10k obj,Train FlexZBoost,DP0.2 Full ,0.014,TRUE,0:05:19,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl04,1,test_train_50k,rail-train 50k obj,Train FlexZBoost,DP0.2 Full ,0.02,TRUE,0:06:25,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl06,1,test_train_100k,rail-train 100k obj,Train FlexZBoost,DP0.2 Full ,0.023,TRUE,0:12:51,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl08,1,test_train_500k,rail-train 500k obj,Train FlexZBoost,DP0.2 Full ,0.031,TRUE,0:44:20,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl10,1,test_train_1M,rail-train 1M obj,Train FlexZBoost,DP0.2 Full ,0.033,TRUE,0:57:54,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl12,1,test_train_2.4M,rail-train 2.4M obj,Train FlexZBoost,DP0.2 Full ,0.0158,TRUE,2:20:55,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,"test_train_10k   
+",Test training set size - 10k obj,FlexZBoost,DP0.2 Full ,627,TRUE,2:20:15,/lustre/t0/scratch/users/julia/pcw_2023,repetir
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_50k,Test training set size - 50k obj,FlexZBoost,DP0.2 Full ,627,TRUE,1:10:24,/lustre/t0/scratch/users/julia/pcw_2023,repetir 
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_100k,Test training set size - 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,0:55:27,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_500k,Test training set size - 500k obj,FlexZBoost,DP0.2 Full ,627,TRUE,0:55:48,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_1M,Test training set size - 1 M obj,FlexZBoost,DP0.2 Full ,627,TRUE,0:56:00,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_2.4M,Test training set size - 2.4M obj,FlexZBoost,DP0.2 Full ,627,FALSE,0:55:48,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,all,840,fzboost_trunc4_chunk_150k,Test clean input - truncate mags to 4 decimal cases in pre-proc,FlexZBoost,DP0.2 Full ,627,TRUE,0:18:39,/lustre/t1/cl/lsst/pz_project/pcw_2023,
+Failed,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",,fzboost_trunc4_chunk_2M,Test clean input - truncate mags to 4 decimal cases in pre-proc - large files (chunk 2M),FlexZBoost,DP0.2 Full ,627,FALSE,,/lustre/t1/cl/lsst/pz_project/pcw_2023,not done 
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",840,fzboost_all_dec_cases_chunk_150k,Test clean input - full decimal cases -> same as test_hardware_t1,FlexZBoost,DP0.2 Full ,627,TRUE,0:36:09,/lustre/t1/cl/lsst/pz_project/pcw_2023,"same as test_hardware_t1, fzboost_all_dec_cases_chunk_150k dir is a symbolic link to test_hardware_t1 "
+Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,fzboost_all_dec_cases_chunk_2M,Test clean input - full decimal cases - large files (chunk 2M) -> same as test_io_chunk_2M,FlexZBoost,DP0.2 Full ,627,TRUE,1:12:03,/lustre/t1/cl/lsst/pz_project/pcw_2023,same as test_io_chunk_2M
+Finished,Julia,Apollo,HTCondor,all,840,fzboost_10x_all_dec_cases_chunk_150k,Large run to compare with Henrique's results - all decimal cases - chunk 150k  -- 10x DP0 ,FlexZBoost,10x DP0.2 Full ,6270,FALSE,3:15:12,/lustre/t1/cl/lsst/pz_project/pcw_2023,tentei submeter um de 100x e o condor reclamou que excedeu o máximo de processos permitidos. submeti com 10x. 
+Finished,Julia,Apollo,HTCondor,all,840,fzboost_10x_trunc4_chunk_150k,"Large run to compare with Henrique's results - truncate mags to 4 decimal cases in pre-proc, small files (chunk 150k) - 10x DP0",FlexZBoost,10x DP0.2 Full ,6270,FALSE,2:16:09,/lustre/t1/cl/lsst/pz_project/pcw_2023,
+Failed,Julia,Apollo,HTCondor,all,840,fzboost_10x_trunc4_chunk_2M,"Large run to compare with Henrique's results - truncate mags to 4 decimal cases in pre-proc, large files (chunk 2M) - 10x DP0",FlexZBoost,10x DP0.2 Full ,6270,FALSE,2:16:58,/lustre/t1/cl/lsst/pz_project/pcw_2023,"Checar total de tasks, suspeito que está incompleto. 2M estoura a memória, mas suspeito que 1M com 4 casas decimais seja uma opção melhor que os atuais 150k para quando tivermos o DR1 completo.  Testar depois com slurm "
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,bpz_trunc4_chunk_150k,Test clean input - truncate mags to 4 decimal cases in pre-proc,BPZ,DP0.2 Full ,627,TRUE,0:23:21,/lustre/t1/cl/lsst/pz_project/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,bpz_all_dec_cases_chunk_150k,Test clean input - full decimal cases ,BPZ,DP0.2 Full ,627,TRUE,0:18:16,/lustre/t1/cl/lsst/pz_project/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,bpz_seds_default,Test BPZ train linearity with number of SED templates - 8 SEDS,BPZ,DP0.2 Full ,627,TRUE,0:21:52,/lustre/t0/scratch/users/julia/pcw_2023,
+Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,bpz_seds_2x_default,Test BPZ train linearity with number of SED templates - 16 SEDS,BPZ,DP0.2 Full ,627,TRUE,0:33:50,/lustre/t0/scratch/users/julia/pcw_2023,
+Planned,Julia,Apollo,HTCondor,,,,Test training set contents - representative 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,,,
+Planned,Julia,Apollo,HTCondor,,,,Test training set contents - realistic 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,,,
+Planned,Julia,Apollo,HTCondor,,,,Test data format - input .parquet ,FlexZBoost,DP0.2 Full ,627,FALSE,,,
+Planned,Julia,Apollo,HTCondor,,,,Test data format - input .hdf5 ,FlexZBoost,DP0.2 Full ,627,TRUE,,,
