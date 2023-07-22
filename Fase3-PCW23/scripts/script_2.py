@@ -80,7 +80,7 @@ def process_file(file_path, root, process_id):
             
     host_list = [(k, v) for (k, v) in host_map.items()]
 
-    csv_file_path = f'~/test/{process_id}.csv'
+    csv_file_path = f'~/{process_id}.csv'
     
     #csv_exists = os.path.isfile(csv_file_path)
     #with open(csv_file_path, 'w', newline='') as csvfile:
@@ -108,6 +108,7 @@ def process_files_in_folder(folder_path, process_id):
                 
 
 def main(csv_file):
+    
     df = pd.read_csv(csv_file)
     folders = df['file_path'].tolist()
 
@@ -119,5 +120,5 @@ def main(csv_file):
             print(f"A pasta '{folder_path}' não existe.")
 
 if __name__ == "__main__":
-    csv_file = "~/output_1.csv"
+    csv_file = "~/output.csv"
     main(csv_file)
