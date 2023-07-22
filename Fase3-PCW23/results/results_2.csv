@@ -1,0 +1,10 @@
+comment,process_id,start,end,duration,user,file_path
+Test input mags truncated 4 decimal cases - small files (max 150k objects).,fzboost_trunc4_chunk_150k,1900-07-15 20:33:39,1900-07-15 20:52:18,0:18:39,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/fzboost_trunc4_chunk_150k
+Test input mags with all decimal cases - small files (max 150k objects). Repeat 100x DP0. ,fzboost_all_dec_cases_chunk_150k_100x,1900-07-16 12:53:01,1900-07-16 16:08:13,3:15:12,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/fzboost_10x_all_dec_cases_chunk_150k
+Test input mags with all decimal cases - small files (max 150k objects).,bpz_all_dec_cases_chunk_150k,1900-07-15 20:06:21,1900-07-15 20:24:37,0:18:16,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/bpz_all_dec_cases_chunk_150k
+Test large inputs (preproc max 150k rows),test_io_chunk_150k,1900-07-15 19:53:01,1900-07-15 20:23:42,0:30:41,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/test_io_chunk_150k
+Test read and write from Lustre T1. FlexZBoost on full DP0.2.,test_hardware_t1,1900-07-13 23:57:24,1900-07-14 00:33:33,0:36:09,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/test_hardware_t1
+Test input truncated 4 decimal cases - small files (max 150k objects). Repeat 100x DP0. ,fzboost_trunc4_chunk_150k_100x,1900-07-15 21:00:54,1900-07-15 23:17:03,2:16:09,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/fzboost_10x_trunc4_chunk_150k
+Test large inputs (preproc max 2M rows),test_io_chunk_2M,1900-07-15 18:34:16,1900-07-15 19:46:19,1:12:03,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/test_io_chunk_2M
+Test read and write from Lustre T1. FlexZBoost on full DP0.2.,test_hardware_t1,1900-07-13 21:19:41,1900-07-13 21:22:22,0:11:28,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/test_hardware_t1_failed
+Test input mags truncated 4 decimal cases - small files (max 150k objects).,bpz_trunc4_chunk_150k,1900-07-15 19:39:11,1900-07-15 20:02:32,0:23:21,julia,/lustre/t1/cl/lsst/pz_project/pcw_2023/bpz_trunc4_chunk_150k

@@ -80,7 +80,7 @@ def process_file(file_path, root, process_id):
             
     host_list = [(k, v) for (k, v) in host_map.items()]
 
-    csv_file_path = f'~/test/{process_id}.csv'
+    csv_file_path = f'~/{process_id}.csv'
     
     #csv_exists = os.path.isfile(csv_file_path)
     #with open(csv_file_path, 'w', newline='') as csvfile:
@@ -98,8 +98,6 @@ def process_file(file_path, root, process_id):
         tasks_df = pd.DataFrame(tasks)
         tasks_df['host'] = host
         tasks_df.to_csv(csv_file_path, index=False, header=False, mode='a')
-    
-    raise Error("Helo")
 
 def process_files_in_folder(folder_path, process_id):
     for root, _, files in os.walk(folder_path):
@@ -110,6 +108,7 @@ def process_files_in_folder(folder_path, process_id):
                 
 
 def main(csv_file):
+    
     df = pd.read_csv(csv_file)
     folders = df['file_path'].tolist()
 
