@@ -120,5 +120,5 @@ def main(csv_file):
             print(f"A pasta '{folder_path}' não existe.")
 
 if __name__ == "__main__":
-    csv_file = "~/output.csv"
+    csv_file = "~/ic-photoz/Fase3-PCW23/results/results_reprocess.csv"
     main(csv_file)
