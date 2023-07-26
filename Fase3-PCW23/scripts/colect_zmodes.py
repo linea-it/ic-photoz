@@ -59,12 +59,12 @@ if __name__ == "__main__":
     base_path = "/lustre/t1/cl/lsst/pz_project/pcw_2023" #/lustre/t0/scratch/users/julia/pcw_2023
     tests = [
         #t1
-        #"fzboost_trunc4_chunk_150k",
+        #"fzboost_trunc4_chunk_150k", ok
         "fzboost_all_dec_cases_chunk_150k_100x",#nop
         "fzboost_trunc4_chunk_150k_100x",#nop
-        "bpz_trunc4_chunk_150k",
-        "bpz_all_dec_cases_chunk_150k",
-        "bpz_seds_default",
+        #"bpz_trunc4_chunk_150k",
+        #"bpz_all_dec_cases_chunk_150k",
+        "bpz_seds_default",#nop
         "bpz_seds_2x_default",
         "test_hardware_t1"
     ]
