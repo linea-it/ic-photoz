@@ -16,20 +16,17 @@ training pkl file copied from Henrique's dir to  /home/julia/.local/share/rail_s
 Nodes online: 15, Slots total: 840, Slots in use: 392, Slots free: 448"
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t0,"Test hardware - read from T0, write to T0",FlexZBoost,DP0.2 Full ,627,FALSE,0:35:42,/lustre/t0/scratch/users/julia/pcw_2023,
 Killed,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_ms04,"Test hardware - read from MS04,  write to MS04",FlexZBoost,DP0.2 Full ,627,FALSE,,,
-Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,"test_fzboost_31_bins           
-",Test output resolution - 31 bins,FlexZBoost,DP0.2 Full ,67,TRUE,2:01:15,/lustre/t0/scratch/users/julia/pcw_2023,Using the default training pkl file ~/.local/share/rail_scripts/estimator_fzboost.pkl
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,"test_fzboost_31_bins",Test output resolution - 31 bins,FlexZBoost,DP0.2 Full ,67,TRUE,2:01:15,/lustre/t0/scratch/users/julia/pcw_2023,Using the default training pkl file ~/.local/share/rail_scripts/estimator_fzboost.pkl
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_101_bins,Test output resolution - 101 bins,FlexZBoost,DP0.2 Full ,212,TRUE,1:04:24,/lustre/t0/scratch/users/julia/pcw_2023,Unexpected result -> double check! 
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_201_bins,Test output resolution - 201 bins,FlexZBoost,DP0.2 Full ,419,TRUE,1:13:06,/lustre/t0/scratch/users/julia/pcw_2023,
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,test_fzboost_301_bins,Test output resolution - 301 bins,FlexZBoost,DP0.2 Full ,627,FALSE,1:01:05,/lustre/t0/scratch/users/julia/pcw_2023,./rail-train -b 301 /home/julia/tmp/data/dp0_2/training_set_dp0.2_10k.pq
-Finished,Julia,Apollo,HTCondor,apl02 ,1,"test_train_10k   
-",rail-train 10k obj,Train FlexZBoost,DP0.2 Full ,0.014,TRUE,0:05:19,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
+Finished,Julia,Apollo,HTCondor,apl02 ,1,"test_train_10k",rail-train 10k obj,Train FlexZBoost,DP0.2 Full ,0.014,TRUE,0:05:19,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
 Finished,Julia,Apollo,HTCondor,apl04,1,test_train_50k,rail-train 50k obj,Train FlexZBoost,DP0.2 Full ,0.02,TRUE,0:06:25,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
 Finished,Julia,Apollo,HTCondor,apl06,1,test_train_100k,rail-train 100k obj,Train FlexZBoost,DP0.2 Full ,0.023,TRUE,0:12:51,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
 Finished,Julia,Apollo,HTCondor,apl08,1,test_train_500k,rail-train 500k obj,Train FlexZBoost,DP0.2 Full ,0.031,TRUE,0:44:20,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
 Finished,Julia,Apollo,HTCondor,apl10,1,test_train_1M,rail-train 1M obj,Train FlexZBoost,DP0.2 Full ,0.033,TRUE,0:57:54,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
 Finished,Julia,Apollo,HTCondor,apl12,1,test_train_2.4M,rail-train 2.4M obj,Train FlexZBoost,DP0.2 Full ,0.0158,TRUE,2:20:55,/lustre/t0/scratch/users/julia/pcw_2023/training_sets,
-Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,"test_train_10k   
-",Test training set size - 10k obj,FlexZBoost,DP0.2 Full ,627,TRUE,2:20:15,/lustre/t0/scratch/users/julia/pcw_2023,repetir
+Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,"test_train_10k",Test training set size - 10k obj,FlexZBoost,DP0.2 Full ,627,TRUE,2:20:15,/lustre/t0/scratch/users/julia/pcw_2023,repetir
 Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_50k,Test training set size - 50k obj,FlexZBoost,DP0.2 Full ,627,TRUE,1:10:24,/lustre/t0/scratch/users/julia/pcw_2023,repetir 
 Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_100k,Test training set size - 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,0:55:27,/lustre/t0/scratch/users/julia/pcw_2023,
 Finished,Julia,Apollo,HTCondor,"apl08, apl10, apl12, apl14",224,test_train_500k,Test training set size - 500k obj,FlexZBoost,DP0.2 Full ,627,TRUE,0:55:48,/lustre/t0/scratch/users/julia/pcw_2023,
