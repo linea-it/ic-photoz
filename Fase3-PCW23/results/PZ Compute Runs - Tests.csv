@@ -9,11 +9,7 @@ Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, 
 Finished,Helo,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl22",448,test_bpz_2x_files,Test linearity ,BPZ,2x original files ,1254,FALSE,0:42:52,/lustre/t0/scratch/users/heloisa.mengisztki,
 Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,test_io_chunk_2M,Test I/O ,FlexZBoost,whole files (~2M obj),653,FALSE,1:12:03,/lustre/t1/cl/lsst/pz_project/pcw_2023,esse ocupa apenas 157 slots
 Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,test_io_chunk_150k,Test I/O ,FlexZBoost,prep-proc limit 150k obj ,660,FALSE,0:30:41,/lustre/t1/cl/lsst/pz_project/pcw_2023,refazer esse teste limitando a 157 slots 
-Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t1,"Test hardware - read from T1, write to T1",FlexZBoost,"DP0.2 Full 
-1935 .pq files
-33 GB",627,TRUE,0:36:09,/lustre/t1/cl/lsst/pz_project/pcw_2023,"input dir is a symbolic link to /lustre/t1/cl/lsst/pz_project/pcw_2023/dp0.2_pre_processed 
-training pkl file copied from Henrique's dir to  /home/julia/.local/share/rail_scripts 
-Nodes online: 15, Slots total: 840, Slots in use: 392, Slots free: 448"
+Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t1,"Test hardware - read from T1, write to T1",FlexZBoost,"DP0.2 Full 1935 .pq files 33 GB",627,TRUE,0:36:09,/lustre/t1/cl/lsst/pz_project/pcw_2023,"input dir is a symbolic link to /lustre/t1/cl/lsst/pz_project/pcw_2023/dp0.2_pre_processed training pkl file copied from Henrique's dir to  /home/julia/.local/share/rail_scripts Nodes online: 15, Slots total: 840, Slots in use: 392, Slots free: 448"
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_t0,"Test hardware - read from T0, write to T0",FlexZBoost,DP0.2 Full ,627,FALSE,0:35:42,/lustre/t0/scratch/users/julia/pcw_2023,
 Killed,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,test_hardware_ms04,"Test hardware - read from MS04,  write to MS04",FlexZBoost,DP0.2 Full ,627,FALSE,,,
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06",168,"test_fzboost_31_bins",Test output resolution - 31 bins,FlexZBoost,DP0.2 Full ,67,TRUE,2:01:15,/lustre/t0/scratch/users/julia/pcw_2023,Using the default training pkl file ~/.local/share/rail_scripts/estimator_fzboost.pkl
@@ -43,7 +39,3 @@ Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14"
 Finished,Julia,Apollo,HTCondor,"apl02, apl04, apl06, apl08, apl10, apl12, apl14",392,bpz_all_dec_cases_chunk_150k,Test clean input - full decimal cases ,BPZ,DP0.2 Full ,627,TRUE,0:18:16,/lustre/t1/cl/lsst/pz_project/pcw_2023,
 Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,bpz_seds_default,Test BPZ train linearity with number of SED templates - 8 SEDS,BPZ,DP0.2 Full ,627,TRUE,0:21:52,/lustre/t0/scratch/users/julia/pcw_2023,
 Finished,Julia,Apollo,HTCondor,"apl01, apl03, apl05, apl07, apl09, apl11, apl13, apl15",448,bpz_seds_2x_default,Test BPZ train linearity with number of SED templates - 16 SEDS,BPZ,DP0.2 Full ,627,TRUE,0:33:50,/lustre/t0/scratch/users/julia/pcw_2023,
-Planned,Julia,Apollo,HTCondor,,,,Test training set contents - representative 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,,,
-Planned,Julia,Apollo,HTCondor,,,,Test training set contents - realistic 100k obj,FlexZBoost,DP0.2 Full ,627,TRUE,,,
-Planned,Julia,Apollo,HTCondor,,,,Test data format - input .parquet ,FlexZBoost,DP0.2 Full ,627,FALSE,,,
-Planned,Julia,Apollo,HTCondor,,,,Test data format - input .hdf5 ,FlexZBoost,DP0.2 Full ,627,TRUE,,,
