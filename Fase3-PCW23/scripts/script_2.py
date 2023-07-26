@@ -5,6 +5,8 @@ from sys import argv, stdin
 import yaml
 import pandas as pd
 import os
+
+import sys
 from itertools import islice
 
 # python script_2.py
@@ -27,6 +29,9 @@ def process_output_file(task_id, path_logs_files):
     for root, _, files in os.walk(path_logs_files):
         for file_name in files:
             if file_name.endswith(f'-{task_id}.out'):
+                sys.stdout.write(".")
+                sys.stdout.flush()
+                
                 file_path = os.path.join(path_logs_files, file_name)
                 
                 file_name = ""
@@ -49,7 +54,7 @@ def process_output_file(task_id, path_logs_files):
 def process_file(file_path, root, process_id):
     print(f"Processando o arquivo: {file_path}")
     
-    path_logs_files = os.path.join(root, "log/")
+    path_logs_files = os.path.join(root, "log-10B-bpz/")
     
     task_map = {}
     host_map = {}
@@ -102,7 +107,7 @@ def process_file(file_path, root, process_id):
 def process_files_in_folder(folder_path, process_id):
     for root, _, files in os.walk(folder_path):
         for file_name in files:
-            if file_name.endswith('rail-condor.log'):
+            if file_name.endswith('rail-condor-10B-flexzboost-2.log'):
                 file_path = os.path.join(root, file_name)
                 process_file(file_path, root, process_id)
                 
@@ -119,6 +124,15 @@ def main(csv_file):
         else:
             print(f"A pasta '{folder_path}' não existe.")
 
+def process_for_folder():
+    folder_path = "/home/henrique.almeida/results/"
+    process_id = "log-10B-flexzboost-2" #log-10B-flexzboost/   log-10B-flexzboost-2/
+    if os.path.exists(folder_path):
+        process_files_in_folder(folder_path, process_id)
+    else:
+        print(f"A pasta '{folder_path}' não existe.")
+            
 if __name__ == "__main__":
     csv_file = "~/ic-photoz/Fase3-PCW23/results/results_reprocess.csv"
-    main(csv_file)
+    #main(csv_file)
+    process_for_folder()
