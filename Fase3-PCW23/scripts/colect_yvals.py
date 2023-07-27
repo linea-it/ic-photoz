@@ -58,11 +58,8 @@ if __name__ == "__main__":
     base_path = "/lustre/t1/cl/lsst/pz_project/pcw_2023" #/lustre/t0/scratch/users/julia/pcw_2023
     tests = [
         #t1
-        "fzboost_trunc4_chunk_150k",
-"fzboost_10x_all_dec_cases_chunk_150k", # == results/fzboost_all_dec_cases_chunk_150k_100x
-
-"bpz_trunc4_chunk_150k",
-"bpz_all_dec_cases_chunk_150k"
+        "test_io_chunk_150k",
+        "bpz_all_dec_cases_chunk_150k",
     ]
     
     for test_id in tests:
