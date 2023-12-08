@@ -40,6 +40,17 @@ def build_output_name(file_name, template, extension=DEFAULT_EXT):
 
     return template.format(fname=split[0],  ext=ext)
 
+def read_parquet_schema_df(filename: str) -> pd.DataFrame:
+    """Return a Pandas dataframe corresponding to the schema of a parquet file.
+       The returned dataframe has the columns: column, pa_dtype
+    """
+    # Ref: https://stackoverflow.com/a/64288036/
+    schema = pyarrow.parquet.read_schema(filename, memory_map=True)
+    schema = pd.DataFrame(({"column": name, "pa_dtype": str(pa_dtype)} for name, pa_dtype in zip(schema.names, schema.types)))
+    schema = schema.reindex(columns=["column", "pa_dtype"], fill_value=pd.NA)  # Ensures columns in case the parquet file has an empty dataframe.
+
+    return schema
+
 def read_random_file(parquet_file, output_dir, num_rows):
     flux_columns = map_bands("{band}_gaap1p0Flux", DEFAULT_BANDS)
     flux_error_columns = map_bands("{band}_gaap1p0FluxErr", DEFAULT_BANDS)
@@ -49,7 +60,14 @@ def read_random_file(parquet_file, output_dir, num_rows):
     try:
         with ParquetFile(parquet_file, buffer_size=BUFFER_SIZE) as f:
             parquet_data = pd.read_parquet(parquet_file)
-            all_columns = ["coord_dec", "coord_ra"] + flux_columns + flux_error_columns
+            
+            schema = read_parquet_schema_df(filename)
+            for colname in schema.column:
+                if colname == 'objectId' or 'coord' in colname:
+                    print(colname)
+            print()
+            
+            all_columns = ["objectId", "coord_dec", "coord_ra"] + flux_columns + flux_error_columns
             
             table = parquet_data.sample(n=num_rows).filter(items=all_columns)
             
