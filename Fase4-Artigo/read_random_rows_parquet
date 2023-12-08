@@ -1,16 +1,37 @@
 #!/usr/bin/env python3
 
 import pandas as pd
-import numpy as np
 
 from os.path import basename, join, splitext
 from pyarrow.parquet import ParquetFile
 from pyarrow import ArrowInvalid
 from sys import argv
+from numpy import log, log10, multiply, nan_to_num, nan
 
 BUFFER_SIZE = 1<<20
 DEFAULT_EXT = '.csv'
 TEMPLATE = "sample_{fname}{ext}"
+DEFAULT_BANDS = ("u", "g", "r", "i", "z", "y")
+
+def map_bands(template, bands):
+    return [template.format(band=band) for band in bands]
+
+def flux_to_mag(table, values, errors):
+    MAG_CONV = log(10)*0.4
+    MAG_OFFSET = 31.4
+
+    for val, err in zip(values, errors):
+        table[err] = table[err] / (table[val]*MAG_CONV)
+    
+    for val in values:
+        table[val] = -2.5*log10(table[val]) + MAG_OFFSET
+
+def convert_to_magnitude(table, flux_columns, flux_error_columns, mag_columns, mag_error_columns):
+    all_flux = flux_columns + flux_error_columns
+    all_mag = mag_columns + mag_error_columns
+    flux_mag_map = {flux: mag for (flux, mag) in zip(all_flux, all_mag)}
+    table.rename(flux_mag_map, axis=1, inplace=True, errors='raise')
+    flux_to_mag(table, mag_columns, mag_error_columns)
 
 def build_output_name(file_name, template, extension=DEFAULT_EXT):
     file_name = basename(file_name)
@@ -20,22 +41,35 @@ def build_output_name(file_name, template, extension=DEFAULT_EXT):
     return template.format(fname=split[0],  ext=ext)
 
 def read_random_file(parquet_file, output_dir, num_rows):
+    flux_columns = map_bands("{band}_gaap1p0Flux", DEFAULT_BANDS)
+    flux_error_columns = map_bands("{band}_gaap1p0FluxErr", DEFAULT_BANDS)
+    mag_columns = map_bands("mag_{band}", DEFAULT_BANDS)
+    mag_error_columns = map_bands("magerr_{band}", DEFAULT_BANDS)
 
-   try:
+    try:
         with ParquetFile(parquet_file, buffer_size=BUFFER_SIZE) as f:
             parquet_data = pd.read_parquet(parquet_file)
-            sample_data = parquet_data.sample(n=num_rows)
+            all_columns = ["coord_dec", "coord_ra"] + flux_columns + flux_error_columns
+            
+            table = parquet_data.sample(n=num_rows).filter(items=all_columns)
+            
+            for col in all_columns:
+                nan_to_num(table[col], copy=False, nan=nan, posinf=nan, neginf=nan)
+            
+            convert_to_magnitude(table, flux_columns, flux_error_columns, mag_columns, mag_error_columns)
 
             output_name = build_output_name(parquet_file, TEMPLATE) 
             output_path = join(output_dir, output_name)
+            
+            table['original_file'] = output_name
+            
+            table.to_csv(output_path, index=False)
 
-            sample_data.to_csv(output_path, index=False)
-
-   except ArrowInvalid as e:
+    except ArrowInvalid as e:
         print('Error: parquet library returned error.', file=stderr)
         print(e, file=stderr)
         raise SystemExit(1)
-   except OSError as e:
+    except OSError as e:
         print('Error: %s' % e, file=stderr)
         raise SystemExit(1)
 
