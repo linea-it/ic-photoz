@@ -1,0 +1,16 @@
+comment,process_id,start,end,duration,user,file_path
+BPZ with two copies of CWWSB4.list (BPZ default),bpz_seds_2x_default,1900-07-15 17:11:09,1900-07-15 17:44:59,0:33:50,julia,/lustre/t0/scratch/users/julia/pcw_2023/bpz_seds_2x_default
+FlexZBoost trained with 50k galaxies.,test_train_50k,1900-07-15 13:48:29,1900-07-15 14:58:53,1:10:24,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_50k
+Test FlexZBoost p(z) with 201 bins.,test_fzboost_201_bins,1900-07-15 13:39:39,1900-07-15 14:52:45,1:13:06,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_fzboost_201_bins
+Test FlexZBoost p(z) with 101 bins.,test_fzboost_101_bins,1900-07-14 21:43:23,1900-07-14 22:47:47,1:04:24,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_fzboost_101_bins
+FlexZBoost trained with 100k galaxies.,test_train_100k,1900-07-15 15:02:33,1900-07-15 15:58:00,0:55:27,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_100k
+"BPZ with COSMOS_MOD.list (32 SEDs used in  Ilbert et al., 2009)",bpz_seds_cosmos,1900-07-15 15:47:22,1900-07-15 15:51:33,0:04:11,julia,/lustre/t0/scratch/users/julia/pcw_2023/bpz_seds_test_failure
+Test FlexZBoost p(z) with 301 bins.,test_fzboost_301_bins,1900-07-15 14:57:59,1900-07-15 15:59:04,1:01:05,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_fzboost_301_bins
+"BPZ with COSMOS_MOD.list (32 SEDs used in  Ilbert et al., 2009)",bpz_seds_cosmos,1900-07-15 15:47:22,1900-07-15 15:51:33,0:04:11,julia,/lustre/t0/scratch/users/julia/pcw_2023/bpz_seds_cosmos
+Test read and write from Lustre T0. FlexZBoost on full DP0.2.,test_hardware_t0,1900-07-13 22:38:22,1900-07-13 22:42:00,0:35:42,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_hardware_t0
+BPZ with CWWSB4.list (BPZ default),bpz_seds_default,1900-07-15 17:49:59,1900-07-15 18:11:51,0:21:52,julia,/lustre/t0/scratch/users/julia/pcw_2023/bpz_seds_default
+Test FlexZBoost p(z) with 31 bins.,test_fzboost_31_bins,1900-07-14 19:28:57,1900-07-14 21:30:12,2:01:15,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_fzboost_31_bins
+FlexZBoost trained with 500k galaxies.,test_train_500k,1900-07-15 16:04:47,1900-07-15 17:00:35,0:55:48,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_500k
+FlexZBoost trained with 1M galaxies.,test_train_1M,1900-07-15 17:12:20,1900-07-15 18:08:20,0:56:00,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_1M
+FlexZBoost trained with 2.4M galaxies.,test_train_2.4M,1900-07-15 18:09:33,1900-07-15 19:05:21,0:55:48,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_2.4M
+FlexZBoost trained with 10k galaxies.,test_train_10k,1900-07-14 20:01:36,1900-07-14 22:21:51,2:20:15,julia,/lustre/t0/scratch/users/julia/pcw_2023/test_train_10k
